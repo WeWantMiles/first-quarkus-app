@@ -9,11 +9,18 @@ import javax.ws.rs.core.MediaType;
 
 import org.mlv.domain.NutriscoreService;
 
+
 @Path("/first")
 public class FirstRessource {
     
     @Inject
     NutriscoreService nutriscoreService;
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String frist() {
+        return "first";
+    }
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
